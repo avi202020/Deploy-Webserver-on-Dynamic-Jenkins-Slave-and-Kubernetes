@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployhtml
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      env: testing
+  template:
+    metadata:
+      name: html-pod
+      labels:
+        env: testing
+        app: html-pod
+    spec:
+      containers:
+      - name: html-container
+        image: vimal13/apache-webserver-php
