@@ -4,6 +4,7 @@ clusters:
 	- cluster:
 		server: https://192.168.99.106:8443
 		certificate-authority: /root/ca.crt
+	  name: lwcluster
 
 contexts:
 	- context:
