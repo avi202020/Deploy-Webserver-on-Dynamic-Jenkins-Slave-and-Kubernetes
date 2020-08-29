@@ -1,17 +1,18 @@
 apiVersion: v1
 kind: Config
 clusters:
-	- cluster:
-		server: https://192.168.99.106:8443
-		certificate-authority: /root/ca.crt
-	  name: lwcluster
-
+        - cluster:
+                server: https://192.168.99.106:8443
+                certificate-authority: /root/ca.crt
+                name: minikube
 contexts:
-	- context:
-		cluster: lwcluster
-		user: saurabh
+        - context:
+                cluster: minikube
+                user: minikube
+          name: minikube
+current-context: minikube
 users:
-	- name: saurabh
-	  user:
-	  	client-key: /root/client.key
-		client-certificate: /root/client.crt
+        - name: minikube
+          user:
+                client-key: /root/client.key
+                client-certificate: /root/client.crt

@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
       - name: html-container
-        image: vimal13/apache-webserver-php
+        image: saurabh43800/apache-webserver-php:v2
